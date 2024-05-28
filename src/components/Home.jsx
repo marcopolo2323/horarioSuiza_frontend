@@ -1,30 +1,19 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import './../css/Home.css'
 
-const Home = () => {
-    const [dni, setDni] = useState('');
-    const navigate = useNavigate();
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        navigate(`/schedule/${dni}`);
-    };
-
-    return (
-        <div className="form-container">
-            <h2>Consulta de Horario</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={dni}
-                    onChange={(e) => setDni(e.target.value)}
-                    placeholder="DNI"
-                    required
-                />
-                <button type="submit">Consultar</button>
-            </form>
+function Home(){
+    return(
+        <div className="Background">
+            <div>
+                <h1>Hola</h1>
+            </div>
+            <p></p>
+            <div>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
-    );
-};
+    )
+}
 
-export default Home;
+export default Home
