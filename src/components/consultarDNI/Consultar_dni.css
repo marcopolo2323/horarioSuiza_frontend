@@ -1,0 +1,43 @@
+.form_container {
+    position: absolute; /* Posiciona el contenedor de manera absoluta */
+    top: 50%; /* Desplaza el contenedor hacia abajo un 50% de la altura de la ventana */
+    left: 50%; /* Desplaza el contenedor hacia la derecha un 50% del ancho de la ventana */
+    transform: translate(-50%, -50%); /* Centra el contenedor */
+    background-color: bisque;
+    height: 50%;
+    width: 50%;
+    
+}
+
+.titulo{
+    position: relative;
+    display: block;
+    
+}
+
+.form_container h2 {
+    color: #000;
+}
+
+.form_container input{
+    margin-left: 40%;
+    height: 30px;
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.buttones{
+    margin-top: 20px;
+    align-items: center;
+}
+
+.buttones button{
+    display: block;
+    margin: auto;
+    background-color: aqua;
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 35px;
+}

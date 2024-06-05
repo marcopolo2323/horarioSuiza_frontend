@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box; /* Esto asegura que el padding y borde se incluyan en el tamaño total del elemento */
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    text-align: center;
+    background-color: #666;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor h1 {
+    color: #000;
+}
+
+.contenedor-preguntas {
+    margin: auto;
+    margin-top: 2em;
+    height: 70%;
+    width: 70%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Asegura que los divs tengan espacio entre ellos */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+}
+
+.contenedor-preguntas div {
+    height: calc(30% - 20px); /* Ajusta la altura para considerar el margen */
+    width: 100%;
+    background-color: #aaa;
+    margin: 10px 0; /* Margen vertical entre los divs */
+    box-sizing: border-box; /* Asegura que el tamaño total incluya padding y borde */
+}
