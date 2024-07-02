@@ -1,39 +1,53 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import './Consultar_dni.css'
+import { useNavigate, Link } from 'react-router-dom';
+import './Consultar_dni.css';
 
-const Consultar_dni = () => {
+const ConsultarDni = () => {
     const [dni, setDni] = useState('');
+    const [error, setError] = useState('');
+
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate(`/schedule/${dni}`);
+        if (dni.length === 8) {
+            navigate(`/schedule/${dni}`);
+        } else {
+            setError('Por favor, ingrese exactamente 8 números.');
+        }
+    };
+
+    const handleChange = (e) => {
+        setDni(e.target.value);
+        if (error) {
+            setError('');
+        }
     };
 
     return (
-    <div className='contenedor'>
-        <div className="form_container">
-            <div className='titulo'>
-                <h2>Consulta de Horario</h2>
-            </div>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={dni}
-                    onChange={(e) => setDni(e.target.value)}
-                    placeholder="DNI"
-                    required
-                    />
-                <div className='buttones'>
-                    <button type="submit">Consultar</button>
-                    <Link to="/"><button>Volver</button></Link>
+        <div className='consultar-dni-container'>
+            <div className="form-container">
+                <div className='titulo'>
+                    <h2>Consulta de Horario</h2>
                 </div>
-            </form>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        value={dni}
+                        onChange={handleChange}
+                        placeholder="Ingrese su DNI"
+                        required
+                        className={`input-dni ${error && 'input-error'}`}
+                    />
+                    {error && <p className="error-message">{error}</p>}
+                    <div className='botones'>
+                        <button type="submit" className="consultar-button">Consultar</button>
+                        <Link to="/" className="volver-button">Volver</Link>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
     );
 };
 
-export default Consultar_dni;
+export default ConsultarDni;

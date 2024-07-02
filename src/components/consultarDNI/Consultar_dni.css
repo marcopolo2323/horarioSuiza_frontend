@@ -1,43 +1,75 @@
-.form_container {
-    position: absolute; /* Posiciona el contenedor de manera absoluta */
-    top: 50%; /* Desplaza el contenedor hacia abajo un 50% de la altura de la ventana */
-    left: 50%; /* Desplaza el contenedor hacia la derecha un 50% del ancho de la ventana */
-    transform: translate(-50%, -50%); /* Centra el contenedor */
-    background-color: bisque;
-    height: 50%;
-    width: 50%;
-    
-}
-
-.titulo{
-    position: relative;
-    display: block;
-    
-}
-
-.form_container h2 {
-    color: #000;
-}
-
-.form_container input{
-    margin-left: 40%;
-    height: 30px;
-    width: 300px;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.buttones{
-    margin-top: 20px;
+.consultar-dni-container {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a; /* Fondo oscuro */
 }
 
-.buttones button{
-    display: block;
-    margin: auto;
-    background-color: aqua;
-    height: 50px;
-    width: 200px;
-    margin-top: 20px;
-    border-radius: 35px;
+.form-container {
+    background-color: #2b2b2b; /* Fondo del formulario */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra */
+    width: 300px;
+    text-align: center;
+}
+
+.titulo {
+    margin-bottom: 20px;
+}
+
+.titulo h2 {
+    color: #61dafb; /* Color del título */
+}
+
+.input-dni {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #333; /* Color de fondo del input */
+    color: #fff; /* Color del texto */
+    border: 2px solid #333; /* Borde normal */
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.input-dni::placeholder {
+    color: #ccc; /* Color del placeholder */
+}
+
+.input-error {
+    border-color: #dc3545; /* Color de borde de error */
+}
+
+.error-message {
+    color: #dc3545; /* Color del mensaje de error */
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column; /* Columna para que los botones estén uno encima del otro */
+    align-items: center; /* Centrado horizontal de los botones */
+}
+
+.consultar-button,
+.volver-button {
+    background-color: #61dafb; /* Color de fondo de los botones */
+    color: #fff; /* Color del texto de los botones */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-bottom: 10px; /* Espacio entre los botones */
+}
+
+.consultar-button:hover,
+.volver-button:hover {
+    background-color: #5a9cff; /* Cambio de color al pasar el mouse */
 }

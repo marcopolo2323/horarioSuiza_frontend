@@ -1,16 +1,181 @@
-.contenedor{
-    text-align: center;
+/* Estilos específicos para el componente SobreCarrera */
+.sobre-carrera-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .sobre-carrera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #666;
-    height: 100vh;
-    width: 100vw;
-}
-
-.contenedor h1{
+    color: #fff;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .sobre-carrera h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+  }
+  
+  .sobre-carrera .top-right-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .sobre-carrera .back-link {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sobre-carrera .back-link:hover {
+    background-color: #cc5200;
+    transform: scale(1.05);
+  }
+  
+  .sobre-carrera .botones-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .sobre-carrera .section-button,
+  .sobre-carrera .active-button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sobre-carrera .section-button:hover {
+    background-color: #cc5200;
+    transform: scale(1.05);
+  }
+  
+  .sobre-carrera .active-button {
+    background-color: #cc5200;
+  }
+  
+  .sobre-carrera .contenedor-acercade {
+    background-color: #f0f8ff;
     color: #000;
-}
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-bottom: 20px;
+    margin: auto;
+    display: none;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .sobre-carrera .active-section {
+    display: block !important;
+  }
+  
+  .sobre-carrera .contenedor-acercade h2 {
+    margin-bottom: 15px;
+    font-size: 2em;
+  }
+  
+  .sobre-carrera .contenedor-acercade p {
+    margin-bottom: 20px;
+  }
+  
+  .sobre-carrera .contenedor-acercade li{
+    margin-left: 40px;
+  }
 
-.contenedor-acercade{
-    background-color: aliceblue;
-    height: 80%;
-    width: 80%;
-}
+  .sobre-carrera .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .sobre-carrera .card {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .sobre-carrera .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .sobre-carrera .card-content {
+    text-align: left;
+  }
+  
+  .sobre-carrera .card-title {
+    font-size: 1.5rem;
+    color: #1976d2;
+  }
+  
+  .sobre-carrera .card-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sobre-carrera .contenedor-acercade {
+      width: 90%;
+    }
+  
+    .sobre-carrera h1 {
+      font-size: 2em;
+    }
+  
+    .sobre-carrera .contenedor-acercade h2 {
+      font-size: 1.5em;
+    }
+  
+    .sobre-carrera .section-button,
+    .sobre-carrera .active-button {
+      font-size: 1em;
+      padding: 8px 16px;
+      margin-bottom: 10px;
+    }
+  
+    .sobre-carrera .botones-seccion {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

@@ -4,8 +4,9 @@ import './App.css';
 import Home from './components/Home/Home';
 import PreguntasFrecuentes from './components/PreguntasFrecuentes/Preguntas_Frecuentes';
 import SobreCarrera from './components/SobreLaCarrera/Sobre_la_carrera';
-import Consultar_dni from './components/consultarDNI/Consultar_dni';
-import Schedule from './components/Schedule';
+import ConsultarDni from './components/consultarDNI/Consultar_dni';
+import Schedule from './components/Schedule/Schedule';
+import CourseDetails from './components/CourseDetails/CourseDetails';
 
 const App = () => {
     return (
@@ -15,8 +16,9 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/sobreLaCarrera" element={<SobreCarrera />} />
                     <Route path="/preguntasFrecuentes" element={<PreguntasFrecuentes />} />
-                    <Route path="/consultar" element={<Consultar_dni />} />
+                    <Route path="/consultar" element={<ConsultarDni />} />
                     <Route path="/schedule/:dni" element={<Schedule />} />
+                    <Route path="/course/:nombreCurso" element={<CourseDetails />} />
                 </Routes>
             </div>
         </Router>

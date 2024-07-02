@@ -1,41 +1,160 @@
-* {
-    box-sizing: border-box; /* Esto asegura que el padding y borde se incluyan en el tamaño total del elemento */
-    margin: 0;
+/* Estilos para el componente PreguntasFrecuentes */
+
+/* Contenedor principal */
+.pf-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado principal */
+.pf-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Botón de volver */
+.volver-button {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.volver-button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenido principal */
+.pf-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Índice de preguntas */
+.indice-preguntas {
+    flex: 1;
+    min-width: 250px;
+}
+
+.indice-preguntas h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.indice-preguntas ul {
+    list-style: none;
     padding: 0;
 }
 
-.contenedor {
-    text-align: center;
-    background-color: #666;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.indice-preguntas li {
+    margin-bottom: 10px;
 }
 
-.contenedor h1 {
-    color: #000;
+.indice-preguntas a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-.contenedor-preguntas {
-    margin: auto;
-    margin-top: 2em;
-    height: 70%;
-    width: 70%;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px; /* Asegura que los divs tengan espacio entre ellos */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total del contenedor */
+.indice-preguntas a:hover {
+    color: #0056b3;
 }
 
-.contenedor-preguntas div {
-    height: calc(30% - 20px); /* Ajusta la altura para considerar el margen */
+/* Input de búsqueda */
+.input-busqueda {
     width: 100%;
-    background-color: #aaa;
-    margin: 10px 0; /* Margen vertical entre los divs */
-    box-sizing: border-box; /* Asegura que el tamaño total incluya padding y borde */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-busqueda:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Lista de preguntas */
+.lista-preguntas {
+    flex: 2;
+    min-width: 300px;
+}
+
+.pregunta {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.pregunta:hover {
+    background-color: #f7f7f7;
+    transform: translateY(-5px);
+}
+
+.pregunta h3 {
+    margin-top: 0;
+    cursor: pointer;
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.pregunta p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* Preguntas relacionadas */
+.preguntas-relacionadas p {
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.preguntas-relacionadas ul {
+    list-style: none;
+    padding: 0;
+}
+
+.preguntas-relacionadas li {
+    margin-bottom: 5px;
+}
+
+/* Botones estilizados como enlaces */
+.link-button {
+    background: none;
+    color: #007bff;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.link-button:hover {
+    color: #0056b3;
+    text-decoration: none;
 }
